@@ -1,16 +1,15 @@
 const defaultSize = 16;
 const grid = document.querySelector("#grid");
-let pixels = [];
+
 
 function createGrid(gridSize) {
-    pixels = [];
-    pxHeight = grid.clientHeight / gridSize;
-    pxWidth = grid.clientWidth / gridSize;
+    height = grid.clientHeight / gridSize;
+    width = grid.clientWidth / gridSize;
     for(let i = 0; i < gridSize**2; i++) {
-      pixels[i] = document.createElement("div");
-      pixels[i].classList.add("pixel");
-      pixels[i].setAttribute("style", `height: ${pxHeight}px; width: ${pxWidth}px;`)
-      grid.appendChild(pixels[i]);
+      const pixel = document.createElement("div");
+      pixel.classList.add("pixel");
+      pixel.setAttribute("style", `height: ${height}px; width: ${width}px;`)
+      grid.appendChild(pixel);
     }
   }
 
