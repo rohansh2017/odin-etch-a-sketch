@@ -9,6 +9,9 @@ function createGrid(gridSize) {
       const pixel = document.createElement("div");
       pixel.classList.add("pixel");
       pixel.setAttribute("style", `height: ${height}px; width: ${width}px;`)
+      pixel.addEventListener("mouseover", () => {
+        pixel.style.backgroundColor = "black";
+      });
       grid.appendChild(pixel);
     }
   }
